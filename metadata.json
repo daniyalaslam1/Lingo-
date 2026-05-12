@@ -1,0 +1,6 @@
+{
+  "name": "Linguo",
+  "description": "An interactive language learning platform with personalized AI feedback and dynamic lessons.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

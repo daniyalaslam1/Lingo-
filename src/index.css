@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Georgia:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-natural-bg: #fdfcf8;
+  --color-natural-sidebar: #f2f0e4;
+  --color-natural-card: #ffffff;
+  --color-natural-text: #414833;
+  --color-natural-text-sub: #6b705c;
+  --color-natural-sage: #a3ad8d;
+  --color-natural-terracotta: #cb997e;
+  --color-natural-border: #e6e4d5;
+}
+
+@layer base {
+  body {
+    @apply bg-natural-bg text-natural-text antialiased;
+  }
+  
+  h1, h2, h3 {
+    @apply font-sans tracking-tight;
+  }
+}
+
+.glass-panel {
+  @apply bg-natural-sidebar/80 backdrop-blur-md border border-natural-border shadow-sm transition-all duration-300;
+}
+
+.lesson-card {
+  @apply relative overflow-hidden rounded-[24px] p-8 transition-all duration-500 bg-natural-card border border-natural-border shadow-sm hover:shadow-md;
+}
+
+.natural-button-primary {
+  @apply px-6 py-3 rounded-[12px] font-semibold text-sm transition-all active:scale-95;
+  @apply bg-natural-sage text-white shadow-sm hover:bg-natural-sage/90;
+}
+
+.natural-button-secondary {
+  @apply px-6 py-3 rounded-[12px] font-semibold text-sm transition-all active:scale-95;
+  @apply bg-white text-natural-text border border-natural-border hover:bg-natural-bg;
+}
+
